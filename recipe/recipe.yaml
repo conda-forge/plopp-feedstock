@@ -24,6 +24,7 @@ requirements:
     - python >=${{ python_min }}
     - matplotlib-base >=3.5
     - scipp
+    - lazy_loader
 
 tests:
   - python:
