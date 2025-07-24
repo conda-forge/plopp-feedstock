@@ -1,30 +1,32 @@
 context:
-  version: "25.7.1"
+  name: plopp
+  version: 25.7.1
   python_min: "3.10"
 
 package:
-  name: plopp
+  name: ${{ name }}
   version: ${{ version }}
 
 source:
-  - url: https://pypi.org/packages/source/p/plopp/plopp-${{ version }}.tar.gz
+  - url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/plopp-${{ version }}.tar.gz
     sha256: c5030b8f227f75c419684b2975bd5dc77a98682190987cff542848375a786fff
 
 build:
-  number: 0
+  number: 1
   noarch: python
-  script: ${{ PYTHON }} -m pip install .
+  script: ${{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
 
 requirements:
   host:
     - python ${{ python_min }}.*
+    - setuptools >=77
+    - setuptools-scm >=8.0
     - pip
-    - setuptools
   run:
     - python >=${{ python_min }}
-    - matplotlib-base >=3.5
-    - scipp
-    - lazy_loader
+    - matplotlib-base >=3.8
+    - scipp >=25.5.0
+    - lazy_loader >=0.4
 
 tests:
   - python:
