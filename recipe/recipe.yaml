@@ -12,7 +12,7 @@ source:
     sha256: 5541d39b6369169a327c76a67cab51c89cdfe226b9581b3a5b1e1ff13edf3d1e
 
 build:
-  number: 0
+  number: 1
   noarch: python
   script: ${{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
 
@@ -25,13 +25,14 @@ requirements:
   run:
     - python >=${{ python_min }}
     - matplotlib-base >=3.8
-    - scipp >=25.5.0
     - lazy_loader >=0.4
     - ipympl >0.8.4
     - pythreejs >=2.4.1
     - mpltoolbox >=24.6.0
     - ipywidgets >=8.1.0
     - python-graphviz >=0.20.3
+  run_constraints:
+    - scipp >=25.5.0
 
 tests:
   - python:
