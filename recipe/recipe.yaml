@@ -32,7 +32,7 @@ requirements:
     - ipywidgets >=8.1.0
     - python-graphviz >=0.20.3
   run_constraints:
-    - scipp >=25.5.0
+- scipp >=25.11.0
 
 tests:
   - python:
