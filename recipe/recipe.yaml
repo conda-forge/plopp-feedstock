@@ -1,6 +1,6 @@
 context:
   name: plopp
-  version: "26.6.0"
+  version: "26.7.0"
   python_min: "3.11"
 
 package:
@@ -9,7 +9,7 @@ package:
 
 source:
   - url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/plopp-${{ version }}.tar.gz
-    sha256: 66625f7f66c93c5d87c4e339e163a00728f785fc16ee91e0d912ecbc34dc727c
+    sha256: fabdfb65176f9772a5b85be864df9bee607a2d40c206f7ffae456341e75717e5
 
 build:
   number: 0
