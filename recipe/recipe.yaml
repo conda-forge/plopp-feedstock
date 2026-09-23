@@ -1,6 +1,6 @@
 context:
   name: plopp
-  version: "26.7.0"
+  version: "26.9.0"
   python_min: "3.11"
 
 package:
@@ -9,7 +9,7 @@ package:
 
 source:
   - url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/plopp-${{ version }}.tar.gz
-    sha256: fabdfb65176f9772a5b85be864df9bee607a2d40c206f7ffae456341e75717e5
+    sha256: a017984de68ce69721e40e2110a4c82de680bfb7791aa8ed5852c5230eeb0d24
 
 build:
   number: 0
@@ -32,6 +32,7 @@ requirements:
     - ipywidgets >=8.1.0
     - python-graphviz >=0.20.3
     - scipp >=25.11.0
+    - anywidget >=0.9.0
 
 tests:
   - python:
