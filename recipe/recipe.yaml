@@ -1,7 +1,6 @@
 context:
   name: plopp
   version: "26.10.0"
-  python_min: "3.11"
 
 package:
   name: ${{ name }}
@@ -38,7 +37,9 @@ tests:
   - python:
       imports:
         - plopp
-      python_version: ${{ python_min }}.*
+      python_version:
+        - ${{ python_min }}.*
+        - "*"
 
 about:
   homepage: https://scipp.github.io/plopp/
